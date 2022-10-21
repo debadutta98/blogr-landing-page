@@ -1,0 +1,42 @@
+@use '../colors' as *;
+@use '../mixins' as *;
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem;
+
+    img {
+        width: 5rem;
+    }
+
+    button {
+        cursor: pointer;
+        border: none;
+        outline: none;
+        background: transparent;
+        margin-top: 5px;
+        color: $white-text;
+        font-size: 0.9rem;
+        font-weight: 550;
+        font-family: inherit;
+    }
+    
+    .auth-nav {
+        margin-left: 20%;
+
+        button:nth-child(2) {
+            @include btn($lightred, $white-text) {
+                padding: 8px 1.5rem;
+                margin-left: 1.5rem;
+            }
+
+            &:hover {
+                background-color: lighten($lightred, 9);
+                color: $white-text;
+            }
+        }
+    }
+}

@@ -1,0 +1,45 @@
+@use "../colors" as *;
+.intro-desktop-view {
+  display: flex;
+  gap: 4rem;
+  margin: 1rem 0rem 1rem 10%;
+  align-items: center;
+  img {
+    width: 70%;
+    margin-right: -14rem;
+    position: relative;
+    z-index: 2;
+    margin-top: -6rem;
+  }
+  &__container {
+    display: flex;
+    flex-direction: column;
+    aside {
+      padding-bottom: 2rem;
+      h3 {
+        color: $very-dark-blue;
+        margin-bottom: 1rem;
+        font-size: larger;
+      }
+      p {
+        font-size: small;
+        line-height: 1.5rem;
+        color: $very-dark-grayish-blue;
+      }
+    }
+  }
+}
+.intro-laptop-view {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  gap: 3rem;
+  margin: 1rem 10% 1rem 0rem;
+  img {
+    width: 80%;
+    margin-left: -16rem;
+  }
+  &__container {
+    @extend .intro-desktop-view__container;
+  }
+}

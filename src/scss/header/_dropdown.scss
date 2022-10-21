@@ -1,0 +1,48 @@
+@use "../colors" as *;
+.dropdown-container {
+    position: relative;
+    padding: 1rem 0.3rem 1rem;
+    .dropdown {
+        display: none;
+        padding: 1rem 2rem;
+        line-height: 1.7rem;
+        border-radius: 5px;
+        position: absolute;
+        background-color: $white-text;
+        list-style-type: none;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        left: -1.5rem;
+        top: 3rem;
+        a {
+            text-decoration: none;
+            color: black;
+            font-size: 1rem;
+            &:hover {
+                font-weight: bold;
+            }
+        }
+    }
+            & button {
+            &::after {
+                content: url(../images/icon-arrow-light.svg);
+                margin-left: 7px;
+                display: inline-block;
+            }
+        }
+}
+@for $i from 1 through 4 {
+    .dropdown-container:nth-child(#{$i}):hover {
+        .dropdown {
+            display: inline;
+            @if #{$i} == "3" {
+                left: -1.3rem;
+            }
+        }
+        & button {
+            text-decoration: underline;
+            &::after {
+                transform: rotate(180deg);
+            }
+        }
+    }
+}

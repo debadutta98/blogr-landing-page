@@ -1,0 +1,42 @@
+@use '../colors' as *;
+@use '../mixins' as *;
+.banner{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:1rem;
+    padding: 5rem;
+    color:$white-text;
+    &__title{
+        text-align: center;
+        line-height: 2.5rem;
+        h1{
+            color:$white-text;
+        }
+        span{
+            color:lighten($grayish-blue, 10);
+        }
+    }
+    &__btn-container{
+        button:first-child{
+            @include btn($lightred,$white-text){
+                padding:8px 1rem;
+            }
+            &:hover {
+                background-color: lighten($lightred, 9);
+                color: $white-text;
+            }
+        }
+        button:last-child{
+             @include btn($white-text,transparent){
+                padding:8px 1rem;
+                margin-left:15px;
+                outline:1px solid $white-text;
+            }
+            &:hover {
+                background-color: $white-text;
+                color: $lightred;
+            }
+        }
+    }
+}

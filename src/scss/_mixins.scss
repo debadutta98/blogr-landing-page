@@ -1,0 +1,10 @@
+@mixin btn ($color,$bgcolor) {
+    color:$color;
+    background-color: $bgcolor;
+    border-radius: 1rem;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    font-family: inherit;
+    @content;
+}

@@ -1,0 +1,36 @@
+@use "../colors" as *;
+.intro-mobile-view{
+background-color: lighten($color: $very-dark-black-blue, $amount: 5);
+margin: 2rem 0rem;
+background-image: url(../images/bg-pattern-circles.svg);
+background-repeat: no-repeat;
+border-bottom-left-radius: 5rem;
+border-top-right-radius: 5rem;
+display: flex;
+align-items: center;
+gap:4rem;
+padding: 0rem 10%;
+background-size: cover;
+background-position-y:-45rem;
+background-position-x:-15rem;
+position: relative;
+height: 25.8rem;
+z-index: 0;
+img{
+position: relative;
+z-index: 2;
+margin-left: -3rem;
+}
+aside{
+    width: 50%;
+    h1{
+        color: $white-text;
+        margin-bottom: 1rem;
+    }
+    p{
+        line-height: 1.5rem;
+        color: lighten($very-dark-grayish-blue, 50);
+        font-size: small;
+    }
+}
+}

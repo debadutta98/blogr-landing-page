@@ -1,0 +1,65 @@
+@use './colors' as *;
+@use './fonts' as *;
+@use './header';
+@use './main';
+*{
+    box-sizing: border-box;
+    margin: 0%;
+    padding: 0%;
+}
+body{
+    min-width:100%;
+    min-height: 100%;
+    overflow-x:hidden;
+}
+header{
+    background-image:url(../images/bg-pattern-intro-desktop.svg);
+    background-color: $lightred;
+    background-repeat: no-repeat;
+    background-size:150%;
+    background-position: top 51% right -43rem;
+    border-bottom-left-radius: 5rem;
+    font-family: $overpass;
+}
+main{
+    font-family: $overpass;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 4rem;
+    & > h2{
+        position: relative;
+        z-index:1;
+        font-size: xx-large;
+        color:$very-dark-blue;
+    }
+}
+footer {
+    background-color: $very-dark-black-blue;
+    border-top-right-radius: 5rem;
+    font-family: $ubuntu;
+    padding: 4rem 0rem;
+    display: flex;
+    justify-content: center;
+    gap:15%;
+    img{
+        width: 9%;
+        height: 9%;
+    }
+    a{
+        text-decoration: none;
+        color: $grayish-blue;
+        font-size: medium;
+        &:hover{
+            text-decoration: underline;
+        }
+    }
+    h4{
+        color: $white-text;
+        margin-bottom: 2rem;
+    }
+    ul{
+        list-style-type:none;
+        line-height: 2rem;
+    }
+}
