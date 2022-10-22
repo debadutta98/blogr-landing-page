@@ -39,4 +39,9 @@
             }
         }
     }
+    @include mobile {
+        &__title{
+            font-size: 2.5vw;
+        }
+    }
 }

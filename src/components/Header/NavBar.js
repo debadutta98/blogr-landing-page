@@ -1,7 +1,9 @@
 import logo from "../../images/logo.svg";
+import hamburger from "../../images/icon-hamburger.svg";
 import DropDown from "./DropDown";
 export default function NavBar() {
-    return <nav>
+    return <>
+    <nav className="desktop-nav">
         <img src={logo} alt="brand name" />
         <div className="dropdown-container">
             <button> Product</button>
@@ -20,4 +22,9 @@ export default function NavBar() {
             <button><span>Sign Up</span></button>
         </div>
     </nav>
+    <nav className="mobile-nav">
+        <img src={logo} className="brand" alt="brand name" />
+        <img src={hamburger} className="nav-icon" alt="hamburger"/>
+    </nav>
+    </>
 }

@@ -1,15 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,300;0,600;1,300;1,600&family=Ubuntu:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap");
-nav {
+.desktop-nav {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 2rem;
   padding: 2rem;
 }
-nav img {
+.desktop-nav img {
   width: 5rem;
 }
-nav button {
+.desktop-nav button {
   cursor: pointer;
   border: none;
   outline: none;
@@ -20,10 +20,10 @@ nav button {
   font-weight: 550;
   font-family: inherit;
 }
-nav .auth-nav {
+.desktop-nav .auth-nav {
   margin-left: 20%;
 }
-nav .auth-nav button:nth-child(2) {
+.desktop-nav .auth-nav button:nth-child(2) {
   color: hsl(356deg, 100%, 66%);
   background-color: hsl(0deg, 0%, 100%);
   border-radius: 1rem;
@@ -34,9 +34,34 @@ nav .auth-nav button:nth-child(2) {
   padding: 8px 1.5rem;
   margin-left: 1.5rem;
 }
-nav .auth-nav button:nth-child(2):hover {
+.desktop-nav .auth-nav button:nth-child(2):hover {
   background-color: #ff8088;
   color: hsl(0deg, 0%, 100%);
+}
+@media screen and (max-width: 854px) {
+  .desktop-nav {
+    display: none;
+  }
+}
+
+.mobile-nav {
+  display: none;
+  padding: 2rem;
+}
+.mobile-nav .brand {
+  width: 80px;
+  height: auto;
+  margin-right: auto;
+}
+.mobile-nav .nav-icon {
+  width: 50px;
+  height: 30px;
+  cursor: pointer;
+}
+@media screen and (max-width: 854px) {
+  .mobile-nav {
+    display: flex;
+  }
 }
 
 .banner {
@@ -86,6 +111,11 @@ nav .auth-nav button:nth-child(2):hover {
 .banner__btn-container button:last-child:hover {
   background-color: hsl(0deg, 0%, 100%);
   color: hsl(356deg, 100%, 66%);
+}
+@media screen and (max-width: 854px) {
+  .banner__title {
+    font-size: 2.5vw;
+  }
 }
 
 .dropdown-container {
@@ -258,6 +288,12 @@ header {
   border-bottom-left-radius: 5rem;
   font-family: "Overpass", sans-serif;
 }
+@media screen and (max-width: 854px) {
+  header {
+    background-image: url(../images/bg-pattern-intro-mobile.svg);
+    background-position: top 55% center;
+  }
+}
 
 main {
   font-family: "Overpass", sans-serif;
@@ -283,8 +319,8 @@ footer {
   gap: 15%;
 }
 footer img {
-  width: 9%;
-  height: 9%;
+  width: 80px;
+  height: 32px;
 }
 footer a {
   text-decoration: none;
@@ -301,4 +337,12 @@ footer h4 {
 footer ul {
   list-style-type: none;
   line-height: 2rem;
+}
+@media screen and (max-width: 675px) {
+  footer {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 3rem;
+  }
 }/*# sourceMappingURL=index.css.map */
