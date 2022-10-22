@@ -31,7 +31,7 @@
   }
   @include mobile {
     img {
-      width: 100%;
+      width:25rem;
       margin: auto;
     }
     margin: 1rem 10% 1rem 10%;
@@ -57,7 +57,7 @@
   @include mobile {
     img {
       margin: auto;
-      width: 100%;
+      width:30rem;
     }
     margin: 1rem 10% 1rem 10%;
     text-align: center;

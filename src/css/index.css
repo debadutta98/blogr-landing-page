@@ -54,8 +54,8 @@
   margin-right: auto;
 }
 .mobile-nav .nav-icon {
-  width: 50px;
-  height: 30px;
+  width: 40px;
+  height: 25px;
   cursor: pointer;
 }
 @media screen and (max-width: 854px) {
@@ -231,7 +231,7 @@
     justify-content: center;
   }
   .intro-desktop-view img {
-    width: 100%;
+    width: 25rem;
     margin: auto;
   }
 }
@@ -256,7 +256,7 @@
   }
   .intro-laptop-view img {
     margin: auto;
-    width: 100%;
+    width: 30rem;
   }
 }
 
@@ -281,7 +281,7 @@
 .intro-mobile-view img {
   position: relative;
   z-index: 2;
-  margin-left: -3rem;
+  margin-top: 1.5rem;
 }
 .intro-mobile-view aside h1 {
   color: hsl(0deg, 0%, 100%);
@@ -299,16 +299,16 @@
     height: -moz-fit-content;
     height: fit-content;
     margin: 0%;
-    padding: 2rem;
-    gap: 4rem;
+    padding: 0rem 5% 3rem 5%;
+    gap: 2rem;
     flex-direction: column;
     justify-content: center;
     background-position-x: center;
     background-position-y: -15rem;
   }
   .intro-mobile-view img {
-    margin: -12rem auto 0rem;
-    width: 85%;
+    margin: -8rem auto 0rem;
+    width: 20rem;
   }
 }
 @media screen and (max-width: 854px) and (max-width: 473px) {
@@ -342,6 +342,7 @@ body {
 
 header {
   background-image: url(../../public/images/bg-pattern-intro-desktop.svg);
+  background: linear-gradient(149.12deg, #FF8F70 12.62%, #FF3D54 94.36%);
   background-color: hsl(356deg, 100%, 66%);
   background-repeat: no-repeat;
   background-size: 160%;

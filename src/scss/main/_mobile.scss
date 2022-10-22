@@ -20,7 +20,7 @@ z-index: 0;
 img{
 position: relative;
 z-index: 2;
-margin-left: -3rem;
+margin-top: 1.5rem;
 }
 aside{
     h1{
@@ -37,15 +37,15 @@ aside{
     width: 100%;
     height: fit-content;
     margin: 0%;
-    padding: 2rem;
-    gap:4rem;
+    padding: 0rem 5% 3rem 5%;
+    gap:2rem;
     flex-direction: column;
     justify-content: center;
     background-position-x:center;
     background-position-y:-15rem;
     img {
-      margin:-12rem auto 0rem;
-      width:85%;
+      margin:-8rem auto 0rem;
+      width:20rem;
       @include changeLayoutFrom(473px){
         margin-top:-8rem
       }
