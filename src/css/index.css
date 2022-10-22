@@ -146,7 +146,7 @@
   font-weight: bold;
 }
 .dropdown-container button::after {
-  content: url(../images/icon-arrow-light.svg);
+  content: url(../../public/images/icon-arrow-light.svg);
   margin-left: 7px;
   display: inline-block;
 }
@@ -197,6 +197,7 @@
   gap: 4rem;
   margin: 1rem 0rem 1rem 10%;
   align-items: center;
+  padding-bottom: 10rem;
 }
 .intro-desktop-view img {
   width: 70%;
@@ -230,6 +231,7 @@
     justify-content: center;
   }
   .intro-desktop-view img {
+    width: 100%;
     margin: auto;
   }
 }
@@ -243,7 +245,7 @@
 }
 .intro-laptop-view img {
   width: 80%;
-  margin-left: -16rem;
+  margin-left: -16.2rem;
 }
 @media screen and (max-width: 854px) {
   .intro-laptop-view {
@@ -254,20 +256,21 @@
   }
   .intro-laptop-view img {
     margin: auto;
+    width: 100%;
   }
 }
 
 .intro-mobile-view {
   background-color: #30303b;
   margin: 2rem 0rem;
-  background-image: url(../images/bg-pattern-circles.svg);
+  background-image: url(../../public/images/bg-pattern-circles.svg);
   background-repeat: no-repeat;
   border-bottom-left-radius: 5rem;
   border-top-right-radius: 5rem;
   display: flex;
   align-items: center;
   gap: 4rem;
-  padding: 0rem 10%;
+  padding: 0rem 5% 0rem 10%;
   background-size: cover;
   background-position-y: -45rem;
   background-position-x: -15rem;
@@ -280,9 +283,6 @@
   z-index: 2;
   margin-left: -3rem;
 }
-.intro-mobile-view aside {
-  width: 50%;
-}
 .intro-mobile-view aside h1 {
   color: hsl(0deg, 0%, 100%);
   margin-bottom: 1rem;
@@ -294,14 +294,37 @@
 }
 @media screen and (max-width: 854px) {
   .intro-mobile-view {
-    margin: 1rem 10% 1rem 10%;
-    text-align: center;
-    flex-direction: column-reverse;
+    width: 100%;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    margin: 0%;
+    padding: 2rem;
+    gap: 4rem;
+    flex-direction: column;
     justify-content: center;
+    background-position-x: center;
+    background-position-y: -15rem;
   }
   .intro-mobile-view img {
-    margin: auto;
-    width: 80%;
+    margin: -12rem auto 0rem;
+    width: 85%;
+  }
+}
+@media screen and (max-width: 854px) and (max-width: 473px) {
+  .intro-mobile-view img {
+    margin-top: -8rem;
+  }
+}
+@media screen and (max-width: 854px) {
+  .intro-mobile-view aside {
+    text-align: center;
+  }
+  .intro-mobile-view aside h1 {
+    font-size: 2rem;
+  }
+  .intro-mobile-view aside p {
+    font-size: 1rem;
   }
 }
 
@@ -318,18 +341,30 @@ body {
 }
 
 header {
-  background-image: url(../images/bg-pattern-intro-desktop.svg);
+  background-image: url(../../public/images/bg-pattern-intro-desktop.svg);
   background-color: hsl(356deg, 100%, 66%);
   background-repeat: no-repeat;
-  background-size: 150%;
-  background-position: top 51% right -43rem;
+  background-size: 160%;
+  background-position: center right -43rem;
   border-bottom-left-radius: 5rem;
   font-family: "Overpass", sans-serif;
 }
+@media screen and (max-width: 1042px) {
+  header {
+    background-size: 160%;
+    background-position: center right -28rem;
+  }
+}
 @media screen and (max-width: 854px) {
   header {
-    background-image: url(../images/bg-pattern-intro-mobile.svg);
-    background-position: top 55% center;
+    background-size: 230%;
+    background-image: url(../../public/images/bg-pattern-intro-mobile.svg);
+    background-position: center;
+  }
+}
+@media screen and (max-width: 512px) {
+  header {
+    background-size: 300%;
   }
 }
 
@@ -345,6 +380,7 @@ main > h2 {
   z-index: 1;
   font-size: xx-large;
   color: hsl(208deg, 49%, 24%);
+  margin-bottom: 2rem;
 }
 
 footer {

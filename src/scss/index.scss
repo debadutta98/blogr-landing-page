@@ -1,42 +1,51 @@
-@use './colors' as *;
-@use './fonts' as *;
-@use './mixins' as *;
-@use './header';
-@use './main';
-*{
+@use "./colors" as *;
+@use "./fonts" as *;
+@use "./mixins" as *;
+@use "./header";
+@use "./main";
+* {
     box-sizing: border-box;
     margin: 0%;
     padding: 0%;
 }
-body{
-    min-width:100%;
+body {
+    min-width: 100%;
     min-height: 100%;
-    overflow-x:hidden;
+    overflow-x: hidden;
 }
-header{
-    background-image:url(../images/bg-pattern-intro-desktop.svg);
+header {
+    background-image: url(../../public/images/bg-pattern-intro-desktop.svg);
     background-color: $lightred;
     background-repeat: no-repeat;
-    background-size:150%;
-    background-position: top 51% right -43rem;
+    background-size: 160%;
+    background-position: center right -43rem;
     border-bottom-left-radius: 5rem;
     font-family: $overpass;
-    @include mobile{
-        background-image:url(../images/bg-pattern-intro-mobile.svg);
-        background-position: top 55% center;
+    @include changeLayoutFrom(1042px){
+        background-size: 160%;
+        background-position: center right -28rem;
+    }
+    @include mobile {
+        background-size: 230%;
+        background-image: url(../../public/images/bg-pattern-intro-mobile.svg);
+        background-position:center;
+    }
+    @include changeLayoutFrom(512px){
+        background-size: 300%;
     }
 }
-main{
+main {
     font-family: $overpass;
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-top: 4rem;
-    & > h2{
+    & > h2 {
         position: relative;
-        z-index:1;
+        z-index: 1;
         font-size: xx-large;
-        color:$very-dark-blue;
+        color: $very-dark-blue;
+        margin-bottom: 2rem;
     }
 }
 footer {
@@ -46,31 +55,31 @@ footer {
     padding: 4rem 0rem;
     display: flex;
     justify-content: center;
-    gap:15%;
-    img{
+    gap: 15%;
+    img {
         width: 80px;
         height: 32px;
     }
-    a{
+    a {
         text-decoration: none;
         color: $grayish-blue;
         font-size: medium;
-        &:hover{
+        &:hover {
             text-decoration: underline;
         }
     }
-    h4{
+    h4 {
         color: $white-text;
         margin-bottom: 2rem;
     }
-    ul{
-        list-style-type:none;
+    ul {
+        list-style-type: none;
         line-height: 2rem;
     }
     @include changeLayoutFrom(675px) {
         flex-direction: column;
         align-items: center;
         text-align: center;
-        gap:3rem;
+        gap: 3rem;
     }
 }

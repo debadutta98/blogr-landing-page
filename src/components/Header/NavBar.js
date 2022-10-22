@@ -1,10 +1,8 @@
-import logo from "../../images/logo.svg";
-import hamburger from "../../images/icon-hamburger.svg";
 import DropDown from "./DropDown";
 export default function NavBar() {
     return <>
     <nav className="desktop-nav">
-        <img src={logo} alt="brand name" />
+            <img src={process.env.PUBLIC_URL + "/images/logo.svg"} alt="brand name" />
         <div className="dropdown-container">
             <button> Product</button>
             <DropDown list={['Overview','Pricing','Marketplace','Features','Integrations',]} />
@@ -23,8 +21,8 @@ export default function NavBar() {
         </div>
     </nav>
     <nav className="mobile-nav">
-        <img src={logo} className="brand" alt="brand name" />
-        <img src={hamburger} className="nav-icon" alt="hamburger"/>
+            <img src={process.env.PUBLIC_URL + "/images/logo.svg"} className="brand" alt="brand name" />
+            <img src={process.env.PUBLIC_URL + "/images/icon-hamburger.svg"} className="nav-icon" alt="hamburger"/>
     </nav>
     </>
 }

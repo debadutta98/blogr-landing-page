@@ -16,10 +16,13 @@ export default function Main() {
                         by adding customized categories, sections, format, or flow. With this functionality, you’re in full control.</p>
                 </aside>
             </div>
-            <img src={require('../../images/illustration-editor-desktop.svg').default} alt="mobile" />
+            <img src={process.env.PUBLIC_URL + '/images/illustration-editor-desktop.svg'}
+                srcSet={[process.env.PUBLIC_URL + '/images/illustration-editor-desktop.svg 50w', process.env.PUBLIC_URL + '/images/illustration-editor-mobile.svg 100w'].join(',')}
+                sizes="(min-width:854px) 70vw , 100vw"
+                alt="desktop" />
         </div>
         <div className="intro-mobile-view">
-            <img src={require('../../images/illustration-phones.svg').default} alt="mobile" />
+            <img src={process.env.PUBLIC_URL + '/images/illustration-phones.svg'} alt="mobile" />
             <aside>
                 <h1>State of the Art Infrastructure</h1>
                 <p>With reliability and speed in mind, worldwide data centers provide the backbone for ultra-fast connectivity.
@@ -41,7 +44,10 @@ export default function Main() {
                         capable of producing even the most complicated sites.</p>
                 </aside>
             </div>
-            <img src={require('../../images/illustration-laptop-desktop.svg').default} alt="intro desktop" />
+            <img src={process.env.PUBLIC_URL + '/images/illustration-laptop-desktop.svg'} 
+                srcSet={[process.env.PUBLIC_URL + '/images/illustration-laptop-desktop.svg 50w', process.env.PUBLIC_URL + '/images/illustration-laptop-mobile.svg 100w'].join(',')}
+                 sizes="(min-width:854px) 80vw , 100vw"
+                 alt="laptop" />
         </div>
     </main>;
 }

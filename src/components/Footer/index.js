@@ -1,6 +1,6 @@
 export default function Footer() {
     return <footer>
-        <img src={require('../../images/logo.svg').default} alt="brand" />
+        <img src={process.env.PUBLIC_URL + "/images/logo.svg"} alt="brand" />
         <div>
             <h4>Product</h4>
             <ul>
