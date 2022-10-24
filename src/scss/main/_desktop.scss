@@ -30,16 +30,16 @@
     }
   }
   @include mobile {
-    img {
-      width:25rem;
-      margin: auto;
-    }
     margin: 1rem 10% 1rem 10%;
     text-align: center;
     flex-direction: column-reverse;
     justify-content: center;
+    padding-bottom: 10rem;
+    img {
+      width:25rem;
+      margin: auto;
+    }
   }
-  padding-bottom: 10rem;
 }
 .intro-laptop-view {
   display: flex;
@@ -55,13 +55,13 @@
     @extend .intro-desktop-view__container;
   }
   @include mobile {
-    img {
-      margin: auto;
-      width:30rem;
-    }
     margin: 1rem 10% 1rem 10%;
     text-align: center;
     flex-direction: column-reverse;
     justify-content: center;
+    img {
+      margin: auto;
+      width:30rem;
+    }
   }
 }

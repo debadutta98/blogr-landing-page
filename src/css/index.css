@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,300;0,600;1,300;1,600&family=Ubuntu:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap");
 .desktop-nav {
   display: flex;
   justify-content: center;
@@ -54,7 +54,7 @@
   margin-right: auto;
 }
 .mobile-nav .nav-icon {
-  width: 40px;
+  width: 33px;
   height: 25px;
   cursor: pointer;
 }
@@ -141,9 +141,10 @@
   text-decoration: none;
   color: black;
   font-size: 1rem;
+  font-weight: 400;
 }
 .dropdown-container .dropdown a:hover {
-  font-weight: bold;
+  font-weight: 500;
 }
 .dropdown-container button::after {
   content: url(../../public/images/icon-arrow-light.svg);
@@ -192,12 +193,105 @@
   transform: rotate(180deg);
 }
 
+.modal {
+  position: absolute;
+  z-index: 50;
+  top: -3rem;
+  background-color: hsl(0deg, 0%, 100%);
+  border-radius: 5px;
+  width: 50%;
+  box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  text-align: center;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  font-family: "Overpass", sans-serif;
+  padding: 1rem 0rem;
+  line-height: 3rem;
+  display: none;
+}
+@media screen and (max-width: 640px) {
+  .modal {
+    width: 80%;
+  }
+}
+.modal label {
+  cursor: pointer;
+  font-weight: 500;
+}
+.modal label::after {
+  content: url(../../public/images/icon-arrow-dark.svg);
+  margin-left: 5px;
+  display: inline-block;
+  vertical-align: middle;
+}
+.modal a {
+  text-decoration: none;
+  color: inherit;
+}
+.modal hr {
+  margin: 0.8rem 1rem;
+  border: 1px solid hsl(240deg, 2%, 79%);
+  border-top: 0rem;
+  border-left: 0rem;
+  border-right: 0rem;
+}
+.modal ul {
+  margin: 1rem;
+  padding: 0.8rem;
+  list-style-type: none;
+  border-radius: 5px;
+  background-color: #e2e2e4;
+  line-height: 2rem;
+  display: none;
+}
+.modal .btn-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  font-size: 0.8rem;
+}
+.modal .btn-container button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-color: white;
+  font-weight: 500;
+  font-family: inherit;
+}
+.modal .btn-container button:last-child {
+  color: hsl(0deg, 0%, 100%);
+  padding: 7px 1rem;
+  color: hsl(0deg, 0%, 100%);
+  background-color: hsl(355deg, 100%, 74%);
+  border-radius: 1rem;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  font-family: inherit;
+}
+@media screen and (max-width: 854px) {
+  .modal {
+    display: block;
+  }
+}
+.modal input:checked + label::after {
+  transform: rotate(180deg);
+}
+.modal input:checked ~ ul {
+  display: block;
+  font-weight: 500;
+}
+.modal input:checked + label {
+  font-weight: 400;
+}
+
 .intro-desktop-view {
   display: flex;
   gap: 4rem;
   margin: 1rem 0rem 1rem 10%;
   align-items: center;
-  padding-bottom: 10rem;
 }
 .intro-desktop-view img {
   width: 70%;
@@ -229,6 +323,7 @@
     text-align: center;
     flex-direction: column-reverse;
     justify-content: center;
+    padding-bottom: 10rem;
   }
   .intro-desktop-view img {
     width: 25rem;
@@ -335,6 +430,7 @@
 }
 
 body {
+  position: relative;
   min-width: 100%;
   min-height: 100%;
   overflow-x: hidden;
@@ -342,7 +438,6 @@ body {
 
 header {
   background-image: url(../../public/images/bg-pattern-intro-desktop.svg);
-  background: linear-gradient(149.12deg, #FF8F70 12.62%, #FF3D54 94.36%);
   background-color: hsl(356deg, 100%, 66%);
   background-repeat: no-repeat;
   background-size: 160%;

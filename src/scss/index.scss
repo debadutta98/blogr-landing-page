@@ -9,13 +9,13 @@
     padding: 0%;
 }
 body {
+    position: relative;
     min-width: 100%;
     min-height: 100%;
     overflow-x: hidden;
 }
 header {
     background-image: url(../../public/images/bg-pattern-intro-desktop.svg);
-    background: linear-gradient(149.12deg, #FF8F70 12.62%, #FF3D54 94.36%);
     background-color: $lightred;
     background-repeat: no-repeat;
     background-size: 160%;
