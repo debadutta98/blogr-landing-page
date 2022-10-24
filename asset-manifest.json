@@ -1,19 +1,20 @@
 {
   "files": {
-    "main.css": "/blogr-landing-page/static/css/main.76693d95.css",
-    "main.js": "/blogr-landing-page/static/js/main.cd664a06.js",
+    "main.css": "/blogr-landing-page/static/css/main.49ca9c3a.css",
+    "main.js": "/blogr-landing-page/static/js/main.b1a42af5.js",
     "static/js/787.7c75954b.chunk.js": "/blogr-landing-page/static/js/787.7c75954b.chunk.js",
     "static/media/bg-pattern-intro-mobile.svg": "/blogr-landing-page/static/media/bg-pattern-intro-mobile.3d70cc0d02948cb77851.svg",
-    "static/media/bg-pattern-intro-desktop.svg": "/blogr-landing-page/static/media/bg-pattern-intro-desktop.bf6b3e1b727eabeffdc5.svg",
     "index.html": "/blogr-landing-page/index.html",
+    "static/media/bg-pattern-intro-desktop.svg": "/blogr-landing-page/static/media/bg-pattern-intro-desktop.bf6b3e1b727eabeffdc5.svg",
     "static/media/bg-pattern-circles.svg": "/blogr-landing-page/static/media/bg-pattern-circles.bae804b8cc1519f26c94.svg",
     "static/media/icon-arrow-light.svg": "/blogr-landing-page/static/media/icon-arrow-light.9ba0f38e6df41815773e.svg",
-    "main.76693d95.css.map": "/blogr-landing-page/static/css/main.76693d95.css.map",
-    "main.cd664a06.js.map": "/blogr-landing-page/static/js/main.cd664a06.js.map",
+    "static/media/icon-arrow-dark.svg": "/blogr-landing-page/static/media/icon-arrow-dark.5215f8d979a83644d14e.svg",
+    "main.49ca9c3a.css.map": "/blogr-landing-page/static/css/main.49ca9c3a.css.map",
+    "main.b1a42af5.js.map": "/blogr-landing-page/static/js/main.b1a42af5.js.map",
     "787.7c75954b.chunk.js.map": "/blogr-landing-page/static/js/787.7c75954b.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.76693d95.css",
-    "static/js/main.cd664a06.js"
+    "static/css/main.49ca9c3a.css",
+    "static/js/main.b1a42af5.js"
   ]
 }
